@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-family: "Georgia", "serif";
 }
 
 *,
@@ -12,7 +13,73 @@ img {
   width: 100%;
 }
 
+body {
+  margin: 0;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "header header"
+  "main main"
+}
+
+nav ul {
+  font-family: "Patua One", "sans-serif";
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display:flex;
+  justify-content: flex-end;
+}
+
+nav li {
+  margin: 1rem;
+}
+
+nav {
+  grid-area: header;
+}
+
+a {
+  /* color: #fff; */
+  font-size: 2rem;
+}
+
+figcaption h2 {
+  font-family: "Patua One", "sans-serif";
+  font-size: 2rem;
+  color: #30658d;
+}
+
+.banner {
+  grid-area: header;
+}
+
+.pano {
+  grid-column: span 2;
+  grid-area: header;
+}
+
+.logo {
+  grid-area: header;
+  grid-column: 1;
+  grid-row: 2;
+  z-index: 1;
+}
+
+
+
+
+
+
 header {
   /* Remove the <header> box and allow us to directly apply header’s children to the grid. */
   display: contents;
 }
+/* *Typefaces:* `Patua One`, `Georgia`
+- *Text sizes:* `2rem`
+- *Line-heights:* `1.5`
+- *Colours:* `#fff`, `#f2f1ed`, `#30658d`, `#000`
+- *Gaps:* `1rem`
+- *Margins:* `1rem`
+- *Paddings:* `1rem`
+- *Logo width:* `14rem` */
